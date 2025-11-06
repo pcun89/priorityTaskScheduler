@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <title>Priority Task Scheduler</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Priority Task Scheduler</h1>
+
+        <form id="taskForm" class="card">
+            <input id="title" placeholder="Task title" required />
+            <textarea id="description" placeholder="Description (optional)"></textarea>
+            <div class="row">
+                <select id="priority">
+                    <option value="1">High</option>
+                    <option value="2" selected>Medium</option>
+                    <option value="3">Low</option>
+                </select>
+                <input id="due_date" type="date" />
+                <button type="submit">Add Task</button>
+            </div>
+        </form>
+
+        <div class="controls card">
+            <input id="search" placeholder="Search tasks..." />
+            <select id="filterPriority">
+                <option value="">All priorities</option>
+                <option value="1">High</option>
+                <option value="2">Medium</option>
+                <option value="3">Low</option>
+            </select>
+        </div>
+
+        <ul id="taskList" class="list"></ul>
+    </div>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
